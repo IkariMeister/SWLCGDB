@@ -1,1 +1,1 @@
-include ':UI', ':Logic', ':SQLiteDb', ':WebServices'
+include ':UI', ':Logic', ':SQLiteDb', ':WebServices', ':FirebaseWS'

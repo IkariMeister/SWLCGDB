@@ -5,14 +5,11 @@ android {
     buildToolsVersion project.buildToolsVersion
 
     defaultConfig {
-        applicationId "es.elvalledeljedi.swlcgdb.ws"
+        applicationId "es.elvalledeljedi.swlgcdb"
         minSdkVersion project.minSdkVersion.toInteger()
         targetSdkVersion project.targetSdkVersion.toInteger()
         versionCode project.versionCode.toInteger()
         versionName project.versionName
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
     buildTypes {
         release {
@@ -24,9 +21,13 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile "com.android.support:appcompat-v7:$project.appcompatVersion"
-    testCompile "junit:junit:$project.junitVersion"
+    apply plugin: 'checkstyle'
+    compile "com.google.firebase:firebase-storage:$project.firebaseVersion"
+    compile "com.google.firebase:firebase-crash:$project.firebaseVersion"
+    compile "com.google.firebase:firebase-auth:$project.firebaseVersion"
+    compile "com.google.firebase:firebase-database:$project.firebaseVersion"
+
 }
+apply plugin: 'com.google.gms.google-services'
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

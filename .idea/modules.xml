@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FirebaseWS/firebasews.iml" filepath="$PROJECT_DIR$/FirebaseWS/firebasews.iml" />
       <module fileurl="file://$PROJECT_DIR$/Logic/Logic.iml" filepath="$PROJECT_DIR$/Logic/Logic.iml" />
       <module fileurl="file://$PROJECT_DIR$/SQLiteDb/SQLiteDb.iml" filepath="$PROJECT_DIR$/SQLiteDb/SQLiteDb.iml" />
       <module fileurl="file://$PROJECT_DIR$/SWLCGDB.iml" filepath="$PROJECT_DIR$/SWLCGDB.iml" />
