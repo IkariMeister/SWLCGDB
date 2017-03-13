@@ -5,11 +5,12 @@ android {
     buildToolsVersion project.buildToolsVersion
 
     defaultConfig {
-        applicationId "es.elvalledeljedi.swlgcdb"
+        applicationId "es.elvalledeljedi.swlcgdb"
         minSdkVersion project.minSdkVersion.toInteger()
         targetSdkVersion project.targetSdkVersion.toInteger()
         versionCode project.versionCode.toInteger()
         versionName project.versionName
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -20,14 +21,16 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
     apply plugin: 'checkstyle'
     compile "com.google.firebase:firebase-storage:$project.firebaseVersion"
     compile "com.google.firebase:firebase-crash:$project.firebaseVersion"
     compile "com.google.firebase:firebase-auth:$project.firebaseVersion"
     compile "com.google.firebase:firebase-database:$project.firebaseVersion"
+    compile "com.google.dagger:dagger:$project.daggerVersion"
+    compile "com.android.support:design:$project.appcompatVersion"
+    compile "com.android.support:support-vector-drawable:$project.appcompatVersion"
 
+    compile "com.firebaseui:firebase-ui-auth:$project.firebaseUIVersion"
 }
 apply plugin: 'com.google.gms.google-services'
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"

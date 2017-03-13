@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "629736288623",
+    "firebase_url": "https://swlcg-6eebd.firebaseio.com",
+    "project_id": "swlcg-6eebd",
+    "storage_bucket": "swlcg-6eebd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629736288623:android:052f163ed609ba44",
+        "android_client_info": {
+          "package_name": "es.elvalledeljedi.swlcgdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629736288623-k4jon96t51h5duitfll6svnm83psvmf0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV0gV1dGyZmAI_2kbA1sCJAbJ9ibIPA6w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
