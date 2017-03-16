@@ -4,16 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FirebaseWS/FirebaseWS.iml" filepath="$PROJECT_DIR$/FirebaseWS/FirebaseWS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Logic/Logic.iml" filepath="$PROJECT_DIR$/Logic/Logic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Logic/Logic.iml" filepath="$PROJECT_DIR$/Logic/Logic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SQLiteDb/SQLiteDb.iml" filepath="$PROJECT_DIR$/SQLiteDb/SQLiteDb.iml" />
       <module fileurl="file://$PROJECT_DIR$/SQLiteDb/SQLiteDb.iml" filepath="$PROJECT_DIR$/SQLiteDb/SQLiteDb.iml" />
       <module fileurl="file://$PROJECT_DIR$/SWLCGDB.iml" filepath="$PROJECT_DIR$/SWLCGDB.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SWLCGDB.iml" filepath="$PROJECT_DIR$/SWLCGDB.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UI/UI.iml" filepath="$PROJECT_DIR$/UI/UI.iml" />
       <module fileurl="file://$PROJECT_DIR$/UI/UI.iml" filepath="$PROJECT_DIR$/UI/UI.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebServices/WebServices.iml" filepath="$PROJECT_DIR$/WebServices/WebServices.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WebServices/WebServices.iml" filepath="$PROJECT_DIR$/WebServices/WebServices.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FirebaseWS/firebasews.iml" filepath="$PROJECT_DIR$/FirebaseWS/firebasews.iml" />
     </modules>
   </component>
 </project>

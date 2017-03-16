@@ -2,7 +2,9 @@ package es.elvalledeljedi.swlcgdb.common.repository;
 
 import java.util.List;
 
-import es.elvalledeljedi.swlcgdb.domain.entity.BaseEntity;
+import javax.inject.Inject;
+
+import es.elvalledeljedi.swlcgdb.domain.model.BaseEntity;
 
 /**
  * Created by jcgarcia on 23/05/2016.
@@ -11,12 +13,9 @@ public class Repository<T extends BaseEntity> {
 
     private final DataSource<T> dataSource;
 
+    @Inject
     public Repository(DataSource<T> dataSource) {
         this.dataSource = dataSource;
-    }
-
-    public DataSource<T> getDataSource() {
-        return dataSource;
     }
 
     public List<T> getAll() {

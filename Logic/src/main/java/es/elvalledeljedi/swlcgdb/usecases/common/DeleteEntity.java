@@ -2,7 +2,7 @@ package es.elvalledeljedi.swlcgdb.usecases.common;
 
 import es.elvalledeljedi.swlcgdb.common.repository.Repository;
 import es.elvalledeljedi.swlcgdb.domain.Interactor.AbstractInteractor;
-import es.elvalledeljedi.swlcgdb.domain.entity.BaseEntity;
+import es.elvalledeljedi.swlcgdb.domain.model.BaseEntity;
 import es.elvalledeljedi.swlcgdb.executor.InteractorExecutor;
 import es.elvalledeljedi.swlcgdb.executor.MainThreadExecutor;
 
@@ -58,7 +58,7 @@ public class DeleteEntity<T extends BaseEntity> extends AbstractInteractor {
     }
 
     private boolean isRepositoryAvailable(Repository repository) {
-        return repository != null && repository.getDataSource() != null;
+        return repository != null /*&& repository.getDataSource() != null*/;
     }
 
     private void sendResultado() {

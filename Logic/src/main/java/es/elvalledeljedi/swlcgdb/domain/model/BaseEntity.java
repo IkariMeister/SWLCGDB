@@ -1,4 +1,4 @@
-package es.elvalledeljedi.swlcgdb.domain.entity;
+package es.elvalledeljedi.swlcgdb.domain.model;
 
 import java.io.Serializable;
 

@@ -3,7 +3,7 @@ package es.elvalledeljedi.swlcgdb.usecases.common;
 import java.util.List;
 
 import es.elvalledeljedi.swlcgdb.common.repository.Repository;
-import es.elvalledeljedi.swlcgdb.domain.entity.BaseEntity;
+import es.elvalledeljedi.swlcgdb.domain.model.BaseEntity;
 import es.elvalledeljedi.swlcgdb.executor.InteractorExecutor;
 import es.elvalledeljedi.swlcgdb.executor.MainThreadExecutor;
 import es.elvalledeljedi.swlcgdb.usecases.BaseUseCase;
