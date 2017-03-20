@@ -1,49 +1,34 @@
 package es.elvalledeljedi.swlcgdb.firebase.db;
 
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import javax.inject.Inject;
+import es.elvalledeljedi.swlcgdb.domain.datasource.ReadWriteAsyncDataSource;
+import es.elvalledeljedi.swlcgdb.domain.datasource.ReadableAsyncDataSource;
+import es.elvalledeljedi.swlcgdb.domain.datasource.WritableAsyncDataSource;
+import es.elvalledeljedi.swlcgdb.domain.model.BaseEntity;
 
 /**
  * Created by jcgarcia on 13/03/2017.
  */
 
-public abstract class FirebaseDataSource<T> implements ChildEventListener {
-
+public abstract class FirebaseDataSource<T extends BaseEntity,Q,K> implements ReadWriteAsyncDataSource<T,Q,K>,ChildEventListener {
+    protected final ReadWriteAsyncDataSource.Callback<T> mCallback;
     protected final FirebaseDatabase mFirebaseDatabase;
-    protected DatabaseReference mCardReference;
+    protected DatabaseReference mDbReference;
 
-    protected final FirebaseDataSource.FirebaseDataSourceReadListener<T> mCallbackListener;
 
-    @Inject
-    public FirebaseDataSource(FirebaseDatabase pFirebaseDatabase,
-                              FirebaseDataSourceReadListener<T> pCallbackListener) {
+    public FirebaseDataSource(FirebaseDatabase pFirebaseDatabase, Callback<T> pCallback) {
+        this.mCallback = pCallback;
         this.mFirebaseDatabase = pFirebaseDatabase;
-        mCallbackListener = pCallbackListener;
     }
 
     public void init(){
-        mCardReference.addChildEventListener(this);
+        mDbReference.addChildEventListener(this);
     }
     public void stop(){
-        mCardReference.removeEventListener(this);
-    }
-
-    public interface FirebaseDataSourceReadListener<T>{
-        void onItemRetrieved(T value);
-        void onReadError(Error error);
-    }
-
-    public interface FirebaseDataSourceWriteListener<T>{
-
-        void onItemDeleted(T value);
-        void onWriteError(Error error);
-        void onItemUpdated(T value);
-    }
-
-    public interface FirebaseDataSourceRWListener<T> extends
-            FirebaseDataSourceReadListener<T>,FirebaseDataSourceWriteListener<T>{
+        mDbReference.removeEventListener(this);
     }
 }

@@ -3,6 +3,12 @@ env:
   global:
     - ADB_INSTALL_TIMEOUT=8 # 8 minutes (2 minutes by default)
 
+addons:
+  sonarqube:
+    organization: "ikarimeister-github"
+    token:
+      secure: "7eeed9fbb70382714a49beca8b76e7010b87f98b"
+
 android:
   components:
     - tools

@@ -29,12 +29,13 @@ dependencies {
     compile "com.google.firebase:firebase-auth:$project.firebaseVersion"
     compile "com.google.firebase:firebase-database:$project.firebaseVersion"
     compile "com.google.dagger:dagger:$project.daggerVersion"
-    compile "com.android.support:design:$project.appcompatVersion"
-    compile "com.android.support:support-vector-drawable:$project.appcompatVersion"
+    //compile "com.android.support:design:$project.appcompatVersion"
+    //compile "com.android.support:support-vector-drawable:$project.appcompatVersion"
 
     compile "com.firebaseui:firebase-ui-auth:$project.firebaseUIVersion"
     compile "com.jakewharton:butterknife-annotations:$project.butterknifeVersion"
     compile "com.jakewharton:butterknife:$project.butterknifeVersion"
     apt "com.jakewharton:butterknife-compiler:$project.butterknifeVersion"
+    compile project(path: ':Architecture')
 }
 apply plugin: 'com.google.gms.google-services'
