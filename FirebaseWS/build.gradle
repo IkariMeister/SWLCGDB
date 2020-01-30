@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion project.compileSdkVersion.toInteger()
+    buildToolsVersion project.buildToolsVersion
+
+    defaultConfig {
+        applicationId "es.elvalledeljedi.swlcgdb"
+        minSdkVersion project.minSdkVersion.toInteger()
+        targetSdkVersion project.targetSdkVersion.toInteger()
+        versionCode project.versionCode.toInteger()
+        versionName project.versionName
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+    apply plugin: 'checkstyle'
+    compile "com.google.firebase:firebase-storage:$project.firebaseVersion"
+    compile "com.google.firebase:firebase-crash:$project.firebaseVersion"
+    compile "com.google.firebase:firebase-auth:$project.firebaseVersion"
+    compile "com.google.firebase:firebase-database:$project.firebaseVersion"
+    compile "com.google.dagger:dagger:$project.daggerVersion"
+    //compile "com.android.support:design:$project.appcompatVersion"
+    //compile "com.android.support:support-vector-drawable:$project.appcompatVersion"
+
+    compile "com.firebaseui:firebase-ui-auth:$project.firebaseUIVersion"
+    compile "com.jakewharton:butterknife-annotations:$project.butterknifeVersion"
+    compile "com.jakewharton:butterknife:$project.butterknifeVersion"
+    apt "com.jakewharton:butterknife-compiler:$project.butterknifeVersion"
+    compile project(path: ':Architecture')
+}
+apply plugin: 'com.google.gms.google-services'
